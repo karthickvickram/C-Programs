@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int num,temp,digit,f0=0,f1=0,f2=0,f3=0,f4=0,f5=0,f6=0,f7=0,f8=0,f9=0,f10=0;
+    scanf("%d",&num);
+    temp=num;
+    while(num)
+    {
+        digit=num%10;
+        switch(digit)
+        {
+            case 0:f0++;break;
+            case 1:f1++;break;
+            case 2:f2++;break;
+            case 3:f3++;break;
+            case 4:f4++;break;
+            case 5:f5++;break;
+            case 6:f6++;break;
+            case 7:f7++;break;
+            case 8:f8++;break;
+            case 9:f9++;break;
+            case 10:f10++;break;
+        }
+        num/=10;
+    }
+     printf("Frequency of 0 = %d\n",f0);
+     printf("Frequency of 1 = %d\n",f1);
+     printf("Frequency of 2 = %d\n",f2);
+     printf("Frequency of 3 = %d\n",f3);
+     printf("Frequency of 4 = %d\n",f4);
+     printf("Frequency of 5 = %d\n",f5);
+     printf("Frequency of 6 = %d\n",f6);
+     printf("Frequency of 7 = %d\n",f7);
+     printf("Frequency of 8 = %d\n",f8);
+     printf("Frequency of 9 = %d\n",f9);
+
+    return 0;
+}
