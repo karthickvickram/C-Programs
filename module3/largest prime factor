@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int num,till,i,large=1;
+    scanf("%d",&num);
+    for(i=2;i<=num;i++)
+    {
+        if(num%i==0)
+        {
+            while(num%i==0)
+            {
+                num=num/i;
+            }
+            if(large<i)
+                large=i;
+        }
+    }
+    printf("%d",large); 
+    return 0;
+}
