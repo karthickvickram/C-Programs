@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int num,temp,digit,ctr,fact,sum=0;
+    scanf("%d",&num);
+    temp=num;
+    while(num)
+    {
+        digit=num%10;
+        fact=1;
+        for(ctr=1;ctr<=digit;ctr++)
+        {
+            fact=fact*ctr;
+        }
+        sum=sum+fact;
+        num=num/10;
+    }
+    num=temp;
+    if(num==sum)
+        printf("STRONG");
+    else 
+         printf("NOT STRONG");
+    return 0;
+}
