@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,i,n1,n2,n3,n4,max1,max2,max,min1,min2,min,tem1,tem2,med1,med2;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d %d %d %d\n",&n1,&n2,&n3,&n4);
+        max1=(n1>n2)?n1:n2;
+        min1=(n1<n2)?n1:n2;
+        max2=(n3>n4)?n3:n4;
+        min2=(n3<n4)?n3:n4;
+        max =(max1>max2)?max1:max2;
+        tem1=(max1<max2)?max1:max2;
+        min =(min1<min2)?min1:min2;
+        tem2=(min1>min2)?min1:min2;
+        med1=(tem1>tem2)?tem1:tem2;
+        med2=(tem1<tem2)?tem1:tem2;
+        printf("%d > %d > %d > %d\n",max,med1,med2,min);
+    }
+    return 0;
+}
