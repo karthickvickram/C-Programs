@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int reverse(int);
+int main() {
+
+    int num,rev,sqrnum,sqrrev,revsqrrev; 
+    scanf("%d",&num);
+    rev=reverse(num);
+    sqrnum=num*num;
+    sqrrev=rev*rev;
+    revsqrrev=reverse(sqrrev);
+    if(sqrnum==revsqrrev)
+        printf("ADAM");
+    else
+        printf("NOT ADAM");
+    return 0;
+}
+int reverse(int num)
+{
+    int digit,newnum=0;
+    while(num)
+    {
+        digit=num%10;
+        num/=10;
+        newnum=(newnum*10)+digit;
+    }
+    return newnum;
+}
